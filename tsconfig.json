@@ -1,0 +1,30 @@
+{
+    "compilerOptions": {
+        // Куда производится сборка. В нашем случае не так важно, т.к. собираем через webpack
+        "outDir": "./dist/",
+        // Подсвечивает места где не указан тип. Однако это не означает что теперь нельзя использовать any.
+        // Это означает лишь то, что разработчик должен явно писать any
+        "noImplicitAny": true,
+        "module": "ESNext",
+        // Версия стандарта scma script в который по итогу код будет компилироваться.
+        // Для поддержки большинства браузеров
+        "target": "es5",
+        "jsx": "react",
+        // Можно ли компилятору обрабатывать не только .ts файлы, но и .js
+        "allowJs": true,
+        // Определяет то, какими импорты будут. Всего два свойств node и classic
+        "moduleResolution": "node",
+        // esModuleInterop позволяет работать с пакетакми, которые используют commonjs
+        // (require, module.exports) как с обычными пакетами с помощью import
+        "esModuleInterop": true,
+        // Если какая-то библиотека не имеет default export лоадеры типы ts-loader или
+        // babel-loader автоматически создают их. Вместо импорта import * as path from 'path'
+        // можно будет писать import path from 'path'
+        "allowSyntheticDefaultImports": true
+    },
+    "ts-node": {
+        "compilerOptions": {
+            "module": "CommonJS"
+        }
+    }
+}
