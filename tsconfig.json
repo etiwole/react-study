@@ -14,6 +14,10 @@
         "allowJs": true,
         // Определяет то, какими импорты будут. Всего два свойств node и classic
         "moduleResolution": "node",
+        "baseUrl": ".",
+        "paths": {
+            "*": ["./src/*"]
+        },
         // esModuleInterop позволяет работать с пакетакми, которые используют commonjs
         // (require, module.exports) как с обычными пакетами с помощью import
         "esModuleInterop": true,
