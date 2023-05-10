@@ -15,7 +15,9 @@ const AppRouter = () => {
                         element={(
                             // Вообще, можно не обарачивать в Suspense. Тимур зачем-то сделал. Следуем курсу.
                             <Suspense fallback={<div>Loading...</div>}>
-                                {element}
+                                <div className="page-wrapper">
+                                    {element}
+                                </div>
                             </Suspense>
                         )}
                     />
