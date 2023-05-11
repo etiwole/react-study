@@ -40,7 +40,7 @@ module.exports = {
         'import/no-extraneous-dependencies': 'off',
         'react/react-in-jsx-scope': 'off',
         'no-underscore-dangle': 'off',
-        'i18next/no-literal-string': ['warn', { markupOnly: true }],
+        // 'i18next/no-literal-string': ['warn', { markupOnly: true }],
         'max-len': ['error', { code: 100, ignoreComments: true }],
     },
 };
