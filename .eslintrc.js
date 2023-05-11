@@ -16,6 +16,7 @@ module.exports = {
     },
     plugins: [
         'react',
+        'i18next',
     ],
     globals: {
         __IS_DEV__: true,
@@ -36,5 +37,6 @@ module.exports = {
         'import/no-extraneous-dependencies': 'off',
         'react/react-in-jsx-scope': 'off',
         'no-underscore-dangle': 'off',
+        'i18next/no-literal-string': ['warn', { markupOnly: true }],
     },
 };
