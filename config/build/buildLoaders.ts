@@ -17,6 +17,17 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
         ],
     };
 
+    const babelLoader = {
+        test: /\.(js,jsx,tsx)$/,
+        exclude: /node_modules/,
+        use: {
+            loader: "babel-loader",
+            options: {
+                presets: ['@babel/preset-env']
+            }
+        }
+    }
+
     // Если пишем на нативном js - нужно подключить babel-loader для jsx
     const tsLoader = {
         test: /\.tsx?$/,
@@ -49,6 +60,7 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
     return [
         svgLoader,
         fileLoader,
+        babelLoader,
         tsLoader,
         cssLoader,
     ]
