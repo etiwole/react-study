@@ -11,12 +11,12 @@ jobs:
       matrix:
         node: [17.x]
     steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v2
       - name: Setup Node.js environment
-        uses: actions/setup-node@v1.4.3
+        uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node }}
-      - name: Checkout master branch
-        uses: actions/checkout@v2
       - name: Install modules
         run: npm install
       - name: Build production
