@@ -15,21 +15,15 @@ jobs:
         uses: actions/setup-node@v1.4.3
         with:
           node-version: ${{ matrix.node }}
-
       - name: Checkout master branch
         uses: actions/checkout@v2
-
       - name: Install modules
         run: npm install
-
       - name: Build production
         run: npm run build:prod
-
       - name: Linting typescript
         run: npm run lint:ts
-
       - name: Linting styles
         run: npm run lint:scss
-
       - name: Unit testing
         run: npm run test:unit
