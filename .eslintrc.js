@@ -11,7 +11,11 @@ module.exports = {
         ecmaVersion: 'latest',
         sourceType: 'module',
     },
-    plugins: ['react', 'i18next'],
+    plugins: [
+        'react',
+        'i18next',
+        'react-hooks',
+    ],
     globals: {
         __IS_DEV__: true,
     },
@@ -34,6 +38,10 @@ module.exports = {
         'react/react-in-jsx-scope': 'off',
         'no-underscore-dangle': 'off',
         // 'i18next/no-literal-string': ['warn', { markupOnly: true }],
+        'jsx-a11y/click-events-have-key-events': 'off',
+        'jsx-a11y/no-static-element-interactions': 'off',
+        'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
+        'react-hooks/exhaustive-deps': 'error', // Checks effect dependencies
         'max-len': ['error', {
             code: 100,
             ignoreComments: true,

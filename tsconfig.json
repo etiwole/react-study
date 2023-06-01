@@ -24,7 +24,13 @@
         // Если какая-то библиотека не имеет default export лоадеры типы ts-loader или
         // babel-loader автоматически создают их. Вместо импорта import * as path from 'path'
         // можно будет писать import path from 'path'
-        "allowSyntheticDefaultImports": true
+        "allowSyntheticDefaultImports": true,
+      "lib": [
+        "dom",
+        "es5",
+        "scripthost",
+        "dom"
+      ]
     },
     "ts-node": {
         "compilerOptions": {
